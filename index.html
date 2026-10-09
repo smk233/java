@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathfinder Hotel Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Food Zone</a>
+      <a href="#">Special Deals</a>
+      <a href="#">My Account</a>
+      <a href="#">Contact Us</a>
+    </nav>
+
+    <header class="hero">
+      <div class="brand">
+        <div class="ornament">❦</div>
+        <h1>Pathfinder Hotel<br>Restaurant</h1>
+      </div>
+      <div class="hero-image" role="img" aria-label="Delicious restaurant food"></div>
+    </header>
+
+    <main>
+      <h2 class="section-title">LOGIN / REGISTER</h2>
+      <div class="forms">
+        <section class="form-card login-card">
+          <p class="required-note">* Required fields</p>
+          <form>
+            <div class="field">
+              <label for="login-email">Email</label>
+              <span>*</span>
+              <input id="login-email" type="email" required>
+            </div>
+            <div class="field">
+              <label for="login-password">Password</label>
+              <span>*</span>
+              <input id="login-password" type="password" required>
+            </div>
+            <div class="login-options">
+              <label class="remember"><input type="checkbox"> Remember me</label>
+              <a href="#">Forgot password?</a>
+            </div>
+            <div class="actions">
+              <button type="reset">Clear Fields</button>
+              <button type="submit">Login</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="form-card register-card">
+          <p class="required-note">* Required fields</p>
+          <form>
+            <div class="field">
+              <label for="first-name">First Name</label><span>*</span>
+              <input id="first-name" type="text" required>
+            </div>
+            <div class="field">
+              <label for="last-name">Last Name</label><span>*</span>
+              <input id="last-name" type="text" required>
+            </div>
+            <div class="field">
+              <label for="register-email">Email</label><span>*</span>
+              <input id="register-email" type="email" required>
+            </div>
+            <div class="field">
+              <label for="register-password">Password</label><span>*</span>
+              <input id="register-password" type="password" required>
+            </div>
+            <div class="field">
+              <label for="confirm-password">Confirm Password</label><span>*</span>
+              <input id="confirm-password" type="password" required>
+            </div>
+            <div class="field">
+              <label for="security-question">Security Question</label><span>*</span>
+              <select id="security-question" required>
+                <option value="">-- Select question --</option>
+                <option>What is your first school's name?</option>
+                <option>What is your favourite food?</option>
+                <option>What city were you born in?</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="security-answer">Security Answer</label><span>*</span>
+              <input id="security-answer" type="text" required>
+            </div>
+            <div class="actions">
+              <button type="reset">Clear Fields</button>
+              <button type="submit">Register</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>© 2026 Pathfinder Hotel Restaurant</footer>
+  </div>
+</body>
+</html>
