@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brown: #4b3028;
+  --deep-brown: #30221e;
+  --cream: #f4e4cc;
+  --page-bg: #f5f0e6;
+  --border: #c8b9a6;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #b87855;
+  color: #382922;
+  line-height: 1.5;
+}
+
+.page {
+  width: min(1120px, 94%);
+  margin: 28px auto;
+  padding: 0 0 18px;
+  background: var(--page-bg);
+  box-shadow: 0 10px 35px #39201755;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 14px 20px;
+  background: var(--cream);
+}
+
+.navbar a {
+  color: #49352c;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 6px 8px;
+  transition: color .2s ease;
+}
+
+.navbar a:hover {
+  color: #a34d25;
+  text-decoration: underline;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  min-height: 290px;
+  margin: 0 18px;
+  background: var(--deep-brown);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 28px 12px;
+  color: #f6e6d0;
+  text-align: center;
+}
+
+.ornament {
+  font-size: 76px;
+  line-height: 1;
+  margin-bottom: 18px;
+  color: #e7c8a7;
+}
+
+.brand h1 {
+  font-size: clamp(23px, 2.6vw, 34px);
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+.hero-image {
+  min-height: 290px;
+  background-image: linear-gradient(90deg, #24140d20, #24140d00),
+    url("https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=1400&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  padding: 24px 34px 12px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #d8cbbb;
+}
+
+.forms {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.form-card {
+  border: 1px solid var(--border);
+  padding: 18px 22px 22px;
+  background: #faf7f0;
+  min-width: 0;
+}
+
+.required-note {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 14px;
+  color: #6b5547;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: minmax(105px, 1fr) 10px minmax(100px, 1.15fr);
+  align-items: center;
+  gap: 8px;
+  margin: 9px 0;
+}
+
+.field label {
+  font-size: 15px;
+}
+
+.field span {
+  text-align: center;
+  color: #8a3f25;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-width: 0;
+  height: 32px;
+  padding: 5px 8px;
+  border: 1px solid #c9bcae;
+  border-radius: 2px;
+  background: #fffdf8;
+  color: #392a22;
+  font: inherit;
+  font-size: 14px;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid #b87950;
+  outline-offset: 1px;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0 18px;
+  font-size: 14px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-options a {
+  color: #81452f;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+button {
+  border: 1px solid #a99a89;
+  border-radius: 4px;
+  padding: 8px 15px;
+  background: linear-gradient(#fffdf9, #e5d9c9);
+  color: #392a22;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #dfc5a8;
+}
+
+footer {
+  text-align: center;
+  color: #7b6656;
+  font-size: 13px;
+  padding: 22px 10px 0;
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px 12px;
+  }
+
+  .navbar a {
+    font-size: 15px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    margin: 0 10px;
+  }
+
+  .brand {
+    padding: 24px 10px;
+  }
+
+  .ornament {
+    font-size: 52px;
+    margin-bottom: 8px;
+  }
+
+  .hero-image {
+    min-height: 210px;
+  }
+
+  main {
+    padding: 22px 14px 10px;
+  }
+
+  .forms {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .form-card {
+    padding: 15px 12px;
+  }
+
+  .field {
+    grid-template-columns: 95px 8px minmax(90px, 1fr);
+    gap: 5px;
+  }
+
+  .field label {
+    font-size: 13px;
+  }
+
+  .login-options {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
